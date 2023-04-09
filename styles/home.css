@@ -45,10 +45,9 @@
   background-color: white;
   width: 100%;
   max-width: 420px;
-  height: 180px;
-  max-height: 200px;
+  min-height: 100px;
   border-radius: 20px;
-  padding: 10px;
+  padding: 20px 10px;
   transition: ease-in-out background-color 0.4s;
 }
 
@@ -82,4 +81,49 @@
   font-size: 16px;
   font-family: "Montserrat";
   font-weight: 600;
+}
+
+@media screen and (max-width: 568px) {
+  .main-wrap {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 5px;
+  }
+  .title {
+    font-size: 26px;
+  }
+  .card {
+    /*flex-direction: column;*/
+    max-width: 420px;
+    min-height: 100px;
+    padding: 10px;
+  }
+  .info {
+    padding-top: 0px;
+    height: 100%;
+  }
+  .worker-photo {
+    height: 100px;
+    max-width: 100px;
+    /*margin-bottom: 10px;*/
+  }
+  .name {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+  .desc {
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card {
+    flex-direction: column;
+  }
+  .worker-photo {
+    margin-bottom: 10px;
+  }
 }
