@@ -113,6 +113,56 @@ import styles from "@/styles/Home.module.css";
 //   )
 // }
 export default function Home() {
+  const workers = [
+    {
+      name: "Liza Ivanivna",
+      experience: 3,
+      desc: "my name liza i have 16 yers experiens belive me? i will help you!",
+      photo:
+        "https://images.pexels.com/photos/2328141/pexels-photo-2328141.jpeg?cs=srgb&dl=pexels-lucas-pezeta-2328141.jpg&fm=jpg",
+      link: "https://t.me/NetHunter228",
+    },
+    {
+      name: "Liza Ivanivna",
+      experience: 3,
+      desc: "my name liza i have 16 yers experiens belive me? i will help you!",
+      photo:
+        "https://images.pexels.com/photos/2328141/pexels-photo-2328141.jpeg?cs=srgb&dl=pexels-lucas-pezeta-2328141.jpg&fm=jpg",
+      link: "https://t.me/NetHunter228",
+    },
+    {
+      name: "Liza Ivanivna",
+      experience: 3,
+      desc: "my name liza i have 16 yers experiens belive me? i will help you!",
+      photo:
+        "https://images.pexels.com/photos/2328141/pexels-photo-2328141.jpeg?cs=srgb&dl=pexels-lucas-pezeta-2328141.jpg&fm=jpg",
+      link: "https://t.me/NetHunter228",
+    },
+    {
+      name: "Liza Ivanivna",
+      experience: 3,
+      desc: "my name liza i have 16 yers experiens belive me? i will help you!",
+      photo:
+        "https://images.pexels.com/photos/2328141/pexels-photo-2328141.jpeg?cs=srgb&dl=pexels-lucas-pezeta-2328141.jpg&fm=jpg",
+      link: "https://t.me/NetHunter228",
+    },
+    {
+      name: "Liza Ivanivna",
+      experience: 3,
+      desc: "my name liza i have 16 yers experiens belive me? i will help you!",
+      photo:
+        "https://images.pexels.com/photos/2328141/pexels-photo-2328141.jpeg?cs=srgb&dl=pexels-lucas-pezeta-2328141.jpg&fm=jpg",
+      link: "https://t.me/NetHunter228",
+    },
+    {
+      name: "Liza Ivanivna",
+      experience: 3,
+      desc: "my name liza i have 16 yers experiens belive me? i will help you!",
+      photo:
+        "https://images.pexels.com/photos/2328141/pexels-photo-2328141.jpeg?cs=srgb&dl=pexels-lucas-pezeta-2328141.jpg&fm=jpg",
+      link: "https://t.me/NetHunter228",
+    },
+  ];
   return (
     <>
       <Head>
@@ -120,8 +170,39 @@ export default function Home() {
         <meta name="description" content="service for help tarolog" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-      <main className={styles.main}></main>
+      <main className="main-wrap">
+        <div className="container">
+          <h1 className={"title"}>Виберіть власного таролога:</h1>
+          <ul className="workers-wrap">
+            {workers.map((worker) => {
+              return (
+                <a href={worker.link || "#"}>
+                  <div className={"card"}>
+                    <img
+                      className={"worker-photo"}
+                      src={`${worker.photo}`}
+                      alt="photo"
+                    />
+                    <div className="info">
+                      <h3 className="name">
+                        {worker.name} <span>Exp:{worker.experience}</span>
+                      </h3>
+                      <p className="desc">{worker.desc}</p>
+                    </div>
+                  </div>
+                </a>
+              );
+            })}
+          </ul>
+        </div>
+      </main>
     </>
   );
 }
